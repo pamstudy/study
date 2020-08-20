@@ -1,0 +1,315 @@
+<!--/include_header(1)/-->
+
+<div id="container">
+    <div id="contents">
+        <main id="search" class="hc_productWrap hc_new_searchwrap hc_flexcalc125 hc_displayflex_hcal hc_flex_delay">
+			<section class="hc_subtitle">
+				<h2>SEARCH</h2>
+				<p class="hc_search_result_desc" style="display:none;">원활한 검색이 되지않았습니다.<br />원하시는 상품명 또는 찾으시는 스타일을 정확하게 한번 더 기재 후 검색 버튼을 눌러주세요.</p>
+			</section>
+			
+            <div class="form-wrap">
+            <!--/form_search/-->
+                <div class="searchForm">
+                    <!--/input_keyword/-->
+                    <p class="searchPrice" style="display:none"><!--/input_price_min(input-price)/--> 원 ~ <!--/input_price_max(input-price)/--> 원</p>
+                </div>
+                <a href="<!--/link_search/-->" class="searchButton">검색</a>
+            <!--/end_form/-->
+            </div>
+			
+            <div class="list_group" style="display:none">
+                <!--/select_category/-->
+                <!--/select_sort/-->
+            </div>
+			
+            <div class="list_array">
+                <div class="list_arrayRight">
+                    <!--/if_now_product_list_viewtype(list)/-->
+                    <a href="#" onclick="changeviewtype('list');return false;"><img src="/images/d3/m_04/btn_horizontal_on@2x.png" alt="리스트 형"/></a>
+                    <a href="#" onclick="changeviewtype('gallery');return false;"><img src="/images/d3/m_04/btn_vertical_off@2x.png" alt="갤러리 형"/></a>
+                     <!--/else_if_now_product_list_viewtype(gallery)/-->
+                     <a href="#" onclick="changeviewtype('list');return false;"><img src="/images/d3/m_04/btn_horizontal_off@2x.png" alt="리스트 형"/></a>
+                    <a href="#" onclick="changeviewtype('gallery');return false;"><img src="/images/d3/m_04/btn_vertical_on@2x.png" alt="갤러리 형"/></a>
+                    <!--/end_if/-->
+                </div>
+            </div>
+			
+            <!--/block_product/-->
+            <!--/if_product_list/-->
+            <!--/if_product_list_viewtype(list)/-->
+            <div class="list_shopping1x">
+                <ul data-type="vertical" data-open="on">
+                    <!--/loop_product_list(16)/-->
+                    <li>
+						<figure>
+						<!-- 장바구니 아이콘 -->
+							<!--/if_product_list@link_preview/-->
+							<div class="hc_cartPreview"><a href="<!--/product_list@link_preview/-->"><img src="http://magjay.co.kr/web/2019/ss/pc/icon/thumbnailbasket.png" alt="미리보기" title="미리보기" /></a></div>
+							<!--/end_if/-->
+							
+						<!-- 제조사 -->
+						<!--/if_product_list@manufacture/-->
+							<span class="hc_youtube_icon"><!--/product_list@manufacture/--></span>
+						<!--/end_if/-->
+						
+						<!-- 썸네일 -->
+							<a  class="hc_double_tap" href="<!--/product_list@link/-->">
+                                <div class="hc_base_img">
+								<img src="<!--/product_list@image_s/-->" class="listPic" />
+                                <!--/if_product_list@subname/-->
+                                <div class="subname doubleTapCheck">
+                                    <span><em class="doubleTapText"><!--/product_list@subname/--></em></span>
+                                </div>
+                                <!--/end_if/-->
+                                </div>
+							</a>
+						<!-- 상품정보 -->
+							<figcaption class="list_shoppingInfo">
+						<!-- 아이콘 -->
+								<p class="hc_prdicon"><!--/product_list@icons/--></p>
+								<p><!--/product_list@mobile_icons/--></p>
+						<!-- 상품명 -->
+								<p class="hc_prdbrand"><!--/product_list@brand/-->(<!--/product_list@name/--><!-- cre.ma / 리뷰 수 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) --><span class="crema-product-reviews-count" data-product-code="<!--/product_list@uid/-->" data-format=" / 리뷰 : {{{count}}}" data-hide-if-zero="1"></span>)</p>
+							
+							<!-- 모바일 상품명 -->
+								<p><!--/product_list@mobile_name/--></p>
+								
+						<!-- 품절인 경우 -->
+							<!--/if_product_list@is_soldout/-->
+								
+								<!-- 소비자가 & 판매가 -->
+								<p>
+									<!--/if_product_list@price_discount/-->
+									<span class="hc_prdretailprice"><del><!--/number/product_list@price_sell/-->원</del></span>
+									<span class="listPrice">
+										<!--/if_product_list@discount_apply_type(mobile)/-->
+										<span class="fa fa-mobile fa-lg"> </span>
+										<!--/end_if/-->
+										<!--/number/product_list@price_discount/-->원
+									</span>
+									<!--/else/-->
+									<span class="listPrice"><!--/number/product_list@price_sell/-->원</span>
+									<!--/end_if/-->
+								</p>		
+								
+								<p class="listSoldout">(품절)</p>
+								<!--/else/-->
+									<!--/if_product_list@price_replace/-->
+									<p class="listReplce"><!--/product_list@price_replace/--></p>
+									<!--/else/-->
+									
+										<!--/if_product_list@etc/-->
+										<p class="hc_prdetc"><!--/product_list@etc/--></p>
+										<!--/end_if/-->
+										
+										<!-- 소비자가 & 판매가 -->
+										<!--/if_product_list@price_discount/-->
+										<span class="hc_prdretailprice"><del><!--/number/product_list@price_sell/-->원</del></span>
+										<span class="listPrice">
+											<!--/if_product_list@discount_apply_type(mobile)/-->
+											<span class="fa fa-mobile fa-lg"> </span>
+											<!--/end_if/-->
+											<!--/number/product_list@price_discount/-->원
+										</span>
+										<!--/else/-->
+										<span class="listPrice"><!--/number/product_list@price_sell/-->원</span>
+										<!--/end_if/-->
+										
+									<!--/end_if/-->
+									
+										<!--/if_product_list@reserve_price(+1)/-->
+										<p class="listReserve">
+											<!--/if_product_list@used_mobile_reserve/-->
+											<span class="fa fa-mobile fa-lg"> </span>
+											<!--/end_if/-->
+											<!--/number/product_list@reserve_price/-->원 적립
+										</p>
+										<!--/end_if/-->
+										
+										<!--/if_product_list@point_price(+1)/-->
+										<p class="listPoint"><!--/product_list@point_price/--><!--/product_list@point_unit/--> 적립</p>
+										<!--/end_if/-->
+										
+								<!--/end_if/-->
+								
+								<!--/if_product_list@hashtag/-->
+								<p class="hashtag">
+									<!--/loop_product_list@hashtag/-->
+										<a href="<!--/product_list@hashtag@link/-->">#<!--/product_list@hashtag@name/--></a>
+									<!--/end_loop/-->
+								</p>
+								<!--/end_if/-->
+							</figcaption>
+						</figure>
+                    </li>
+                    <!--/end_loop/-->
+                </ul>
+            </div>
+            <!--/end_if/-->
+			
+            <!--/if_product_list_viewtype(gallery)/-->
+            <div class="list_shopping2x">
+                <ul data-type="gallery" data-open="on">
+                    <!--/loop_product_list(16)/-->
+                    <li>
+						<figure>
+						<!-- 장바구니 아이콘 -->
+							<!--/if_product_list@link_preview/-->
+							<div class="hc_cartPreview"><a href="<!--/product_list@link_preview/-->"><img src="http://magjay.co.kr/web/2019/ss/pc/icon/thumbnailbasket.png" alt="미리보기" title="미리보기" /></a></div>
+							<!--/end_if/-->
+							
+						<!-- 제조사 -->
+						<!--/if_product_list@manufacture/-->
+							<span class="hc_youtube_icon"><!--/product_list@manufacture/--></span>
+						<!--/end_if/-->
+						
+						<!-- 썸네일 -->
+                            <a  class="hc_double_tap" href="<!--/product_list@link/-->">
+                                <div class="hc_base_img">
+								<img src="<!--/product_list@image_s/-->" class="listPic" />
+                                <!--/if_product_list@subname/-->
+                                <div class="subname doubleTapCheck">
+                                    <span><em class="doubleTapText"><!--/product_list@subname/--></em></span>
+                                </div>
+                                <!--/end_if/-->
+                                </div>
+							</a>
+                            
+						<!-- 상품정보 -->
+							<figcaption class="list_shoppingInfo">
+						<!-- 아이콘 -->
+								<p class="hc_prdicon"><!--/product_list@icons/--></p>
+								<p><!--/product_list@mobile_icons/--></p>
+						<!-- 상품명 -->
+								<p class="hc_prdbrand"><!--/product_list@brand/-->(<!--/product_list@name/--><!-- cre.ma / 리뷰 수 / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) --><span class="crema-product-reviews-count" data-product-code="<!--/product_list@uid/-->" data-format=" / 리뷰 : {{{count}}}" data-hide-if-zero="1"></span>)</p>
+							
+							<!-- 모바일 상품명 -->
+								<p><!--/product_list@mobile_name/--></p>
+								
+						<!-- 품절인 경우 -->
+								<!--/if_product_list@is_soldout/-->
+								
+								<!-- 소비자가 & 판매가 -->
+								<p>
+									<!--/if_product_list@price_discount/-->
+									<span class="hc_prdretailprice"><del><!--/number/product_list@price_sell/-->원</del></span>
+									<span class="listPrice">
+										<!--/if_product_list@discount_apply_type(mobile)/-->
+										<span class="fa fa-mobile fa-lg"> </span>
+										<!--/end_if/-->
+										<!--/number/product_list@price_discount/-->원
+									</span>
+									<!--/else/-->
+									<span class="listPrice"><!--/number/product_list@price_sell/-->원</span>
+									<!--/end_if/-->
+								</p>		
+								
+								<p class="listSoldout">(품절)</p>
+								<!--/else/-->
+									<!--/if_product_list@price_replace/-->
+									<p class="listReplce"><!--/product_list@price_replace/--></p>
+									<!--/else/-->
+										<!--/if_product_list@etc/-->
+										<p class="hc_prdetc"><!--/product_list@etc/--></p>
+										<!--/end_if/-->
+										
+										<!-- 소비자가 & 판매가 -->
+										<!--/if_product_list@price_discount/-->
+										<span class="hc_prdretailprice"><del><!--/number/product_list@price_sell/-->원</del></span>
+										<span class="listPrice">
+											<!--/if_product_list@discount_apply_type(mobile)/-->
+											<span class="fa fa-mobile fa-lg"> </span>
+											<!--/end_if/-->
+											<!--/number/product_list@price_discount/-->원
+										</span>
+										<!--/else/-->
+										<span class="listPrice"><!--/number/product_list@price_sell/-->원</span>
+										<!--/end_if/-->
+										
+									<!--/end_if/-->
+									
+									<!--/if_product_list@reserve_price(+1)/-->
+									<p class="listReserve">
+										<!--/if_product_list@used_mobile_reserve/-->
+										<span class="fa fa-mobile fa-lg"> </span>
+										<!--/end_if/-->
+										<!--/number/product_list@reserve_price/-->원 적립
+									</p>
+									<!--/end_if/-->
+									
+									<!--/if_product_list@point_price(+1)/-->
+									<p class="listPoint"><!--/product_list@point_price/--><!--/product_list@point_unit/--> 적립</p>
+									<!--/end_if/-->
+									
+								<!--/end_if/-->
+								
+								<!--/if_product_list@hashtag/-->
+								<p class="hashtag">
+									<!--/loop_product_list@hashtag/-->
+										<a href="<!--/product_list@hashtag@link/-->">#<!--/product_list@hashtag@name/--></a>
+									<!--/end_loop/-->
+								</p>
+								<!--/end_if/-->
+                                
+							</figcaption>
+						</figure>
+                    </li>
+                    <!--/end_loop/-->
+                </ul>
+            </div>
+            <!--/end_if/-->
+            <!--/else/-->
+            <div class="none-data" style="display:none;">
+                <p>검색된 상품이 없습니다.</p>
+            </div>
+            <!--/end_if/-->
+            <!--/end_block/-->
+			
+			<div class="hc_displayflex_bottom">
+				<!--/block_product_more/-->
+				<div class="more">
+					<a href="<!--/link_more_product_list/-->" class="btn_moreGray"><span class="more-title">MORE</span></a>
+				</div>
+				<!--/end_block/-->
+			</div>
+        </main>
+    </div>
+</div>
+
+<style>.crema-product-reviews-count {color: #1b1b1b}</style>
+
+<!-- cre.ma / init 스크립트 (Mobile) / 스크립트를 수정할 경우 연락주세요 (support@cre.ma) -->
+<script>(function(i,s,o,g,r,a,m){if(s.getElementById(g)){return};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.id=g;a.async=1;a.src=r;m.parentNode.insertBefore(a,m)})(window,document,'script','crema-jssdk','//widgets.cre.ma/magjay.com/mobile/init.js');</script>
+
+<script>
+// 리뷰 수와 상품 평점을 업데이트하는 함수
+function UpdateCountAndScore() {
+  if (typeof(crema) === "object") {
+    c_c = new crema.ProductReviewsCountWidget;
+    c_s = new crema.ProductReviewsScoreWidget;
+    c_c.attach();
+    c_s.attach();
+  }
+  console.log("%c[CREMA]%c REVIEWS COUNT AND SCORE WAS UPDATED.", "font-weight: bold; color: black;", "color: green");
+}
+
+// Ajax Callback
+var oldXHR = window.XMLHttpRequest;
+
+function newXHR() {
+  var realXHR = new oldXHR();
+  realXHR.addEventListener("readystatechange", function() {
+    if (realXHR.readyState == 4 && realXHR.status == 200) {
+      setTimeout(function() {
+        UpdateCountAndScore()
+      }, 500);
+    }
+  }, false);
+  return realXHR;
+}
+
+window.XMLHttpRequest = newXHR;
+</script>
+
+<!--/include_footer(1)/-->
