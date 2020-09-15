@@ -8,7 +8,7 @@ want to : 친구사이에 사용
 wolud like to : 비즈니스사이에 사용  
 <br>
 
-- 부정문 : don't fell like + ing  
+    부정문 : don't fell like + ing  
 <br>
 
 ex ) I'd like to try : 내가 해보고 싶습니다.  
