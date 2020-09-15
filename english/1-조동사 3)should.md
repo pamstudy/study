@@ -1,4 +1,5 @@
 ## should ##
+<br>
 
 1) 의무 : 권유, 충고의 뉘앙스  
    ex ) You should get a haircut : 너 머리 좀 잘라  
