@@ -1,4 +1,4 @@
-## gotta ##
+## gotta : 의무 ##
 <br>
 
 have got to와 같은 표현  

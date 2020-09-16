@@ -1,4 +1,4 @@
-## would you rather ____ then ##
+## would you rather ____ then : 선택 ##
 <br>
 
 갈까? 말까? 에이 그냥 갈래  
